@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
-import BackButton from '../components/BackButton.jsx'
+import BackButton from '../components/BackButton'
 
 
 function CreateBook (){
@@ -16,7 +16,7 @@ function CreateBook (){
   const handleSaveBook=()=>{
     const data={title,author,publishYear};
     setLoading(true)
-    axios.post('http://localhost:5000/books', data, {headers: {'Content-Type': 'application/json',
+    axios.post('https://bookstore-4-6m74.onrender.com/books', data, {headers: {'Content-Type': 'application/json',
       },
     })
       .then(() => {

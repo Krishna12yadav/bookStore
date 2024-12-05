@@ -16,7 +16,7 @@ function EditBook (){
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5000/books/${bookId.id}`)
+    axios.get(`https://bookstore-4-6m74.onrender.com/books/${bookId.id}`)
     .then((res)=>{
       setTitle(res.data.data.title);
       setAuthor(res.data.data.author);
@@ -39,7 +39,7 @@ function EditBook (){
       data={...data,publishYear}
     }
     setLoading(true)
-    axios.put(`http://localhost:5000/books/${bookId.id}`, data, {headers: {'Content-Type': 'application/json',
+    axios.put(`https://bookstore-4-6m74.onrender.com/books/${bookId.id}`, data, {headers: {'Content-Type': 'application/json',
       },
     })
       .then(() => {
