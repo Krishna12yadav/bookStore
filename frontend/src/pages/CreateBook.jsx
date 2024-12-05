@@ -1,6 +1,7 @@
-import BackButton from "../components/backButton";
+
 import { useState } from "react";
 import axios from "axios";
+import BackButton from "../components/backButton.jsx";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 
@@ -26,6 +27,7 @@ function CreateBook (){
       });
     
   }
+  
 
   const renderCreateBook=()=>{
     return<div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
@@ -66,7 +68,7 @@ function CreateBook (){
 
   return (
     <div className="p-4">
-      <BackButton/>
+      <BackButton className="text-3xl"/>
       <h1 className="text-3xl my-4">CreateBook</h1>
       {loading? (<Spinner/>):renderCreateBook()}
     </div>
